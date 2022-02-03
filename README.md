@@ -1,2 +1,2 @@
 # word_search
-a tool to search word
+A tool for searching words with a fixed length.
