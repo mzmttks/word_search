@@ -45,8 +45,8 @@ if __name__ == "__main__":
     print(f"""Constraints
     Contain    : {args.contain}
     Not contain: {args.notcontain}
-    At         : {args.at}
-    Not at     : {args.notat}
+    At         : {args.at}  (zero-based)
+    Not at     : {args.notat} (zero-based)
     """)
 
     # filter words using the constraings
