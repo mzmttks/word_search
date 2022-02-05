@@ -32,3 +32,5 @@ Constraints
 ['hello']
 The number of found words: 1
 ```
+
+You can find the words that satisfy all constraints.
