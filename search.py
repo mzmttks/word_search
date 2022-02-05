@@ -18,10 +18,22 @@ if __name__ == "__main__":
     pair_lambda = lambda pair: (int(pair[0])-1, pair[1])
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--contains", nargs="*", default=[])
-    parser.add_argument("--notcontains", nargs="*", default=[])
-    parser.add_argument("--at", nargs="*", default=[], type=pair_lambda)
-    parser.add_argument("--notat", nargs="*", default=[], type=pair_lambda)
+    parser.add_argument(
+        "--contain", nargs="*", default=[],
+        help="filter words that contain given alphabets"
+    )
+    parser.add_argument(
+        "--notcontain", nargs="*", default=[],
+        help="filter words that do NOT contain given alphabets"
+    )
+    parser.add_argument(
+        "--at", nargs="*", default=[], type=pair_lambda,
+        help="filter words that have a letter at given place"
+    )
+    parser.add_argument(
+        "--notat", nargs="*", default=[], type=pair_lambda,
+        help="filter words that DO NOT have a letter at given place"
+    )
     args = parser.parse_args()
 
     words = get_words()
