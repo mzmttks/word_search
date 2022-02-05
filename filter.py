@@ -34,20 +34,25 @@ if __name__ == "__main__":
         "--notat", nargs="*", default=[], type=pair_lambda,
         help="filter words that DO NOT have a letter at given place"
     )
+    parser.add_argument(
+        "--nletters", default=5, type=int,
+        help="filter words that have given length"
+    )
     args = parser.parse_args()
 
-    words = get_words()
+    words = get_words(args.nletters)
 
-    print("Constraints")
-    print("   Contains    : ", args.contains)
-    print("   Not contains: ", args.notcontains)
-    print("   At          : ", args.at)
-    print("   Not at      : ", args.notat)
+    print(f"""Constraints
+    Contain    : {args.contain}
+    Not contain: {args.notcontain}
+    At         : {args.at}
+    Not at     : {args.notat}
+    """)
 
     # filter words using the constraings
-    for c in args.contains:
+    for c in args.contain:
         words = [w for w in words if c in w]
-    for c in args.notcontains:
+    for c in args.notcontain:
         words = [w for w in words if c not in w]
     for position, key in args.at:
         words = [w for w in words if w[position] == key]
@@ -55,4 +60,4 @@ if __name__ == "__main__":
         words = [w for w in words if w[position] != key]
 
     pprint.pprint(words)
-    print(len(words))
+    print("The number of found words:", len(words))
