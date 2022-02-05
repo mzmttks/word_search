@@ -15,7 +15,7 @@ def get_words(nletters=5):
 
 
 if __name__ == "__main__":
-    pair_lambda = lambda pair: (int(pair[0])-1, pair[1])
+    pair_lambda = lambda pair: (int(pair[:-1])-1, pair[-1])
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
