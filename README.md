@@ -1,5 +1,5 @@
 # word_search
-A tool for searching words with a fixed length.
+A tool to filter words.
 
 
 ## How to use
