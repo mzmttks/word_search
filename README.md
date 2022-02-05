@@ -8,10 +8,12 @@ A tool to filter words.
 If you want to filter words that 
 * contain `h` and `e`
 * do not contain `a`
-* have letter `l` at the 3rd letter (one origin)
-* have letter `l` at the 4th letter (one origin)
-* do not have letter `s` at the 5th letter
-* do not have letter `y` at the 5th letter
+* have letter 
+    * `l` at the 3rd letter and
+    * `l` at the 4th letter (one-based indexing)
+* do not have
+    * letter `s` at the 5th letter and
+    * letter `y` at the 5th letter (one-based indexing)
 
 
 ```
