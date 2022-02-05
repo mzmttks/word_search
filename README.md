@@ -1,4 +1,4 @@
-# word_search
+# wordfilter
 A tool to filter words.
 
 
